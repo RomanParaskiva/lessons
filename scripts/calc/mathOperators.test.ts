@@ -1,4 +1,4 @@
-import { random } from "faker";
+import { faker } from '@faker-js/faker'
 
 import {
   mul,
@@ -14,8 +14,8 @@ import {
 } from "./mathOperators";
 
 describe("mathOperators test cases", () => {
-  const number1 = random.number();
-  const number2 = random.number();
+  const number1: number = parseInt(faker.random.numeric());
+  const number2 = parseInt(faker.random.numeric());
 
   const resultOfMultiplication = number1 * number2;
   it(`mul ${number1} * ${number2} to equal ${resultOfMultiplication}`, () => {
