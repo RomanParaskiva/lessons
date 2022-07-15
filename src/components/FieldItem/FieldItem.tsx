@@ -1,18 +1,20 @@
 import React, { useState } from 'react'
-import '../styles/fieldItem.css'
+import './fieldItem.css'
 
 interface IFieldItem {
     id?: number | null,
     checked?: boolean | null,
-    width?: number
+    width?: number,
 }
 
 const FieldItem = ({ id, checked, width }: IFieldItem) => {
     const [isChecked, setIsChecked] = useState(checked)
 
-    const handleClick = (): void => {
+    const handleClick = () => {
         setIsChecked((prev) => !prev)
+        console.log(id)     
     }
+    
     return (
         <div style={{
             width: width + 'px',

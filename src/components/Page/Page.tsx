@@ -1,8 +1,8 @@
 import React from 'react'
-import Field from './Field'
+import Field from '../Field/Field'
 
-import { Header } from './Header'
-import '../styles/page.css'
+import { Header } from '../Header/Header'
+import './page.css'
 
 
 export const Page: React.VFC = () => {
@@ -13,9 +13,9 @@ export const Page: React.VFC = () => {
 
       <section>
         <Field
-          width={1000}
-          height={1000}
-          columns={30}
+          width={500}
+          height={500}
+          columns={10}
         />
       </section>
     </article>
