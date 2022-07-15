@@ -14,7 +14,7 @@ const question = (): Promise<null> =>
 
       if (result !== undefined) {
         // eslint-disable-next-line no-console
-        console.log(`Result: ${result}`);
+        console.log(`> ${result}`);
       }
 
       resolve(null);
