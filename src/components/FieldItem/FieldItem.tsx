@@ -5,6 +5,7 @@ interface IFieldItem {
     id?: number | null,
     checked?: boolean | null,
     width?: number,
+    onClick: any
 }
 
 const FieldItem = ({ id, checked, width }: IFieldItem) => {
@@ -12,11 +13,10 @@ const FieldItem = ({ id, checked, width }: IFieldItem) => {
 
     const handleClick = () => {
         setIsChecked((prev) => !prev)
-        console.log(id)     
     }
     
     return (
-        <div style={{
+        <div id={`${id}`} style={{
             width: width + 'px',
             height: width + 'px',
             backgroundColor: isChecked ? 'purple' : '',
@@ -25,7 +25,7 @@ const FieldItem = ({ id, checked, width }: IFieldItem) => {
             className="fieldItem"
             onClick={handleClick}
         >
-            {id}
+            <span>{id}</span>
         </div>
     )
 }
