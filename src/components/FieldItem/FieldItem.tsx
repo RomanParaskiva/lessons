@@ -4,11 +4,10 @@ import './fieldItem.css'
 interface IFieldItem {
     id?: number | null,
     checked?: boolean | null,
-    width?: number,
-    onClick: any
+    width?: number
 }
 
-const FieldItem = ({ id, checked, width }: IFieldItem) => {
+const FieldItem = ({ id, checked, width, }: IFieldItem) => {
     const [isChecked, setIsChecked] = useState(checked)
 
     const handleClick = () => {
